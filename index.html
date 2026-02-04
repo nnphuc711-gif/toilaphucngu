@@ -79,6 +79,8 @@
         "Phúc said: để tao nghĩ đã…"
     ];
 
+    let imageState = 0; // 0: ẩn, 1: phuc.jpg, 2: phuc1.jpg
+
     function changeQuote() {
         const random = Math.floor(Math.random() * quotes.length);
         document.getElementById("quote").innerText = "“" + quotes[random] + "”";
@@ -86,9 +88,22 @@
 
     function toggleImage() {
         const img = document.getElementById("phucImage");
-        img.style.display = img.style.display === "none" ? "block" : "none";
+
+        imageState++;
+
+        if (imageState === 1) {
+            img.src = "phuc.jpg";
+            img.style.display = "block";
+        } else if (imageState === 2) {
+            img.src = "phuc1.jpg";
+            img.style.display = "block";
+        } else {
+            img.style.display = "none";
+            imageState = 0;
+        }
     }
 </script>
+
 
 </body>
 </html>
