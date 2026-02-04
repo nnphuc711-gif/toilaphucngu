@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Phúc Official (Fanpage không chính thức)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2b2b45);
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .card {
+            max-width: 600px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .quote {
+            font-size: 1.3rem;
+            margin: 20px 0;
+        }
+        button {
+            background: #ff6b6b;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-size: 1rem;
+            cursor: pointer;
+            color: #fff;
+        }
+        button:hover {
+            background: #ff8787;
+        }
+        footer {
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Phúc Official</h1>
+    <p>Fanpage không chính thức • Troll vui là chính</p>
+</header>
+
+<div class="card">
+    <div class="quote" id="quote">
+        “Không phải Phúc không thông minh, chỉ là não đang tải…”
+    </div>
+    <button onclick="changeQuote()">Xem thêm khoảnh khắc</button>
+</div>
+
+<footer>
+    © 2026 • Trang này mang tính giải trí, xem xong cười là được 😌
+</footer>
+
+<script>
+    const quotes = [
+        "Không phải Phúc ngu, chỉ là tư duy hơi vòng vo",
+        "Có những câu hỏi sinh ra để Phúc trả lời",
+        "Phúc hôm nay lại khiến khoa học đau đầu",
+        "Não Phúc: đang bảo trì, quay lại sau",
+        "Phúc said: để tao nghĩ đã…"
+    ];
+
+    function changeQuote() {
+        const random = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = "“" + quotes[random] + "”";
+    }
+</script>
+
+</body>
+</html>
